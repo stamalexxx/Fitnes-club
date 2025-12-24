@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+
+actor "User" as user
+actor "Admin" as admin
+
+package "Список действий" {
+  usecase "Вход" as UC1
+  usecase "Регистрация" as UC2
+  usecase "Приобрести план" as UC3
+  usecase "Добавить участника" as UC4
+  usecase "Редактировать участника" as UC5
+  usecase "Удалить участника" as UC6
+}
+
+user --> UC1
+user --> UC2
+user --> UC3
+admin --> UC1
+admin --> UC4
+admin --> UC5
+admin --> UC6
+@enduml

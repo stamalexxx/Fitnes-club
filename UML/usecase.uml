@@ -3,6 +3,7 @@ left to right direction
 
 actor "User" as user
 actor "Admin" as admin
+actor "Trainer" as trainer
 
 package "Список действий" {
   usecase "Вход" as UC1
@@ -11,6 +12,7 @@ package "Список действий" {
   usecase "Добавить участника" as UC4
   usecase "Редактировать участника" as UC5
   usecase "Удалить участника" as UC6
+  usecase "Прием участника на тренировку" as UC7
 }
 
 user --> UC1
@@ -20,4 +22,6 @@ admin --> UC1
 admin --> UC4
 admin --> UC5
 admin --> UC6
+trainer --> UC7
+trainer --> UC2
 @enduml
